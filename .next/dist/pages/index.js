@@ -4,6 +4,26 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -26,238 +46,310 @@ var _jsxFileName = '/Users/pratamasetyaaji/nextJs/pages/index.js?entry';
 var FormItem = _antd.Form.Item;
 var Option = _antd.Select.Option;
 
-exports.default = function () {
-  return _react2.default.createElement(_antd.LocaleProvider, { locale: _en_US2.default, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
+var Index = function (_Component) {
+  (0, _inherits3.default)(Index, _Component);
+
+  function Index() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    (0, _classCallCheck3.default)(this, Index);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
-  }, _react2.default.createElement('div', { style: { marginTop: 100 }, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
+
+    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Index.__proto__ || (0, _getPrototypeOf2.default)(Index)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      ModalText: 'TOmbol Oke mbok pejet yo',
+      visible: false
+    }, _this.showModal = function () {
+      _this.setState({
+        visible: true
+      });
+    }, _this.handleOk = function () {
+      _this.setState({
+        ModalText: 'Modal tertutup setelah 2 detik',
+        confirmLoading: true
+      });
+      setTimeout(function () {
+        _this.setState({
+          visible: false,
+          confirmLoading: false
+        });
+      }, 2000);
+    }, _this.handleCancel = function () {
+      console.log('Clicked cancel button');
+      _this.setState({
+        visible: false
+      });
+    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+  }
+
+  (0, _createClass3.default)(Index, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(_antd.LocaleProvider, { locale: _en_US2.default, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        }
+      }, _react2.default.createElement('div', { style: { marginTop: 100 }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        }
+      }, _react2.default.createElement(_head2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        }
+      }, _react2.default.createElement('link', { rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/antd/2.9.3/antd.min.css', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44
+        }
+      })), _react2.default.createElement('div', { style: { marginnBottom: 20 }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        }
+      }, _react2.default.createElement('div', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47
+        }
+      }, _react2.default.createElement(_antd.Button, { type: 'primary', onClick: this.showModal, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        }
+      }, 'buka modal'), _react2.default.createElement(_antd.Modal, { title: 'Judul',
+        visible: this.state.visible,
+        onOk: this.handleOk,
+        confirmLoading: this.state.confirmLoading,
+        onCancel: this.handleCancel,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        }
+      }, _react2.default.createElement('p', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        }
+      }, this.state.ModalText))), _react2.default.createElement(_antd.Col, { span: 12, offset: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58
+        }
+      }, _react2.default.createElement(_antd.Carousel, { autoplay: true, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        }
+      }, _react2.default.createElement('div', { style: { backgroundColor: 'rgb(16, 142, 433)', height: 150 }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
+        }
+      }, _react2.default.createElement('h3', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
+        }
+      }, '1')), _react2.default.createElement('div', { style: { backgroundColor: 'rgb(16, 142, 322)', height: 150 }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        }
+      }, _react2.default.createElement('h3', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        }
+      }, '2')), _react2.default.createElement('div', { style: { backgroundColor: 'rgb(16, 142, 211)', height: 150 }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        }
+      }, _react2.default.createElement('h3', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        }
+      }, '3')), _react2.default.createElement('div', { style: { backgroundColor: 'rgb(16, 142, 100)', height: 150 }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        }
+      }, _react2.default.createElement('h3', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        }
+      }, '4'))))), _react2.default.createElement(_antd.Form, { horizontal: true, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
+        }
+      }, _react2.default.createElement(FormItem, {
+        label: 'Input Number',
+        labelCol: { span: 8 },
+        wrapperCol: { span: 8 },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        }
+      }, _react2.default.createElement(_antd.InputNumber, { size: 'large', min: 1, max: 10, style: { width: 100 }, defaultValue: 3, name: 'inputNumber', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73
+        }
+      }), _react2.default.createElement('a', { href: '#', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 74
+        }
+      }, 'Link')), _react2.default.createElement(FormItem, {
+        label: 'Switch',
+        labelCol: { span: 8 },
+        wrapperCol: { span: 8 },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77
+        }
+      }, _react2.default.createElement(_antd.Switch, { defaultChecked: true, name: 'switch', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 82
+        }
+      })), _react2.default.createElement(FormItem, {
+        label: 'Slider',
+        labelCol: { span: 8 },
+        wrapperCol: { span: 8 },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85
+        }
+      }, _react2.default.createElement(_antd.Slider, { defaultValue: 70, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 90
+        }
+      })), _react2.default.createElement(FormItem, {
+        label: 'Select',
+        labelCol: { span: 8 },
+        wrapperCol: { span: 8 },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93
+        }
+      }, _react2.default.createElement(_antd.Select, { size: 'large', defaultValue: 'lucy', style: { width: 192 }, name: 'select', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98
+        }
+      }, _react2.default.createElement(Option, { value: 'jack', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99
+        }
+      }, 'jack'), _react2.default.createElement(Option, { value: 'lucy', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 100
+        }
+      }, 'lucy'), _react2.default.createElement(Option, { value: 'disabled', disabled: true, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 101
+        }
+      }, 'disabled'), _react2.default.createElement(Option, { value: 'yiminghe', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 102
+        }
+      }, 'yiminghe'))), _react2.default.createElement(FormItem, {
+        label: 'DatePicker',
+        labelCol: { span: 8 },
+        wrapperCol: { span: 8 },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 106
+        }
+      }, _react2.default.createElement(_antd.DatePicker, { name: 'startDate', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 111
+        }
+      })), _react2.default.createElement(FormItem, {
+        style: { marginTop: 48 },
+        wrapperCol: { span: 8, offset: 8 },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 113
+        }
+      }, _react2.default.createElement(_antd.Button, { size: 'large', type: 'primary', htmlType: 'submit', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 117
+        }
+      }, 'OK'), _react2.default.createElement(_antd.Button, { size: 'large', style: { marginLeft: 8 }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 120
+        }
+      }, 'Cancel'))), _react2.default.createElement('div', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 125
+        }
+      }, _react2.default.createElement(_antd.Row, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 126
+        }
+      }, _react2.default.createElement(_antd.Col, { span: 12, offset: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 127
+        }
+      }, _react2.default.createElement(_antd.Table, { dataSource: dataSource, columns: columns, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 128
+        }
+      })), _react2.default.createElement(_antd.Col, { span: 12, offset: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 130
+        }
+      }, _react2.default.createElement(_antd.Rate, { allowHalf: true, defaultValue: 2.5, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 131
+        }
+      })), _react2.default.createElement(_antd.Col, { span: 12, offset: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 133
+        }
+      }, _react2.default.createElement(_antd.Progress, { type: 'circle', percent: 30, width: 80, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 134
+        }
+      }), _react2.default.createElement(_antd.Progress, { type: 'circle', percent: 70, width: 80, status: 'exception', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 135
+        }
+      }), _react2.default.createElement(_antd.Progress, { type: 'circle', percent: 100, width: 80, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 136
+        }
+      }))))));
     }
-  }, _react2.default.createElement(_head2.default, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    }
-  }, _react2.default.createElement('link', { rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/antd/2.9.3/antd.min.css', __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    }
-  })), _react2.default.createElement('div', { style: { marginBottom: 20 }, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    }
-  }, _react2.default.createElement(_antd.Col, { span: 12, offset: 6, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    }
-  }, _react2.default.createElement(_antd.Carousel, { autoplay: true, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    }
-  }, _react2.default.createElement('div', { style: { backgroundColor: 'rgb(16, 142, 433)', height: 150 }, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    }
-  }, _react2.default.createElement('h3', {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    }
-  }, '1')), _react2.default.createElement('div', { style: { backgroundColor: 'rgb(16, 142, 322)', height: 150 }, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    }
-  }, _react2.default.createElement('h3', {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    }
-  }, '2')), _react2.default.createElement('div', { style: { backgroundColor: 'rgb(16, 142, 211)', height: 150 }, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    }
-  }, _react2.default.createElement('h3', {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    }
-  }, '3')), _react2.default.createElement('div', { style: { backgroundColor: 'rgb(16, 142, 100)', height: 150 }, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    }
-  }, _react2.default.createElement('h3', {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    }
-  }, '4'))))), _react2.default.createElement(_antd.Form, { horizontal: true, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    }
-  }, _react2.default.createElement(FormItem, {
-    label: 'Input Number',
-    labelCol: { span: 8 },
-    wrapperCol: { span: 8 },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    }
-  }, _react2.default.createElement(_antd.InputNumber, { size: 'large', min: 1, max: 10, style: { width: 100 }, defaultValue: 3, name: 'inputNumber', __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    }
-  }), _react2.default.createElement('a', { href: '#', __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    }
-  }, 'Link')), _react2.default.createElement(FormItem, {
-    label: 'Switch',
-    labelCol: { span: 8 },
-    wrapperCol: { span: 8 },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    }
-  }, _react2.default.createElement(_antd.Switch, { defaultChecked: true, name: 'switch', __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    }
-  })), _react2.default.createElement(FormItem, {
-    label: 'Slider',
-    labelCol: { span: 8 },
-    wrapperCol: { span: 8 },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    }
-  }, _react2.default.createElement(_antd.Slider, { defaultValue: 70, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    }
-  })), _react2.default.createElement(FormItem, {
-    label: 'Select',
-    labelCol: { span: 8 },
-    wrapperCol: { span: 8 },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    }
-  }, _react2.default.createElement(_antd.Select, { size: 'large', defaultValue: 'lucy', style: { width: 192 }, name: 'select', __source: {
-      fileName: _jsxFileName,
-      lineNumber: 55
-    }
-  }, _react2.default.createElement(Option, { value: 'jack', __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56
-    }
-  }, 'jack'), _react2.default.createElement(Option, { value: 'lucy', __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57
-    }
-  }, 'lucy'), _react2.default.createElement(Option, { value: 'disabled', disabled: true, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58
-    }
-  }, 'disabled'), _react2.default.createElement(Option, { value: 'yiminghe', __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    }
-  }, 'yiminghe'))), _react2.default.createElement(FormItem, {
-    label: 'DatePicker',
-    labelCol: { span: 8 },
-    wrapperCol: { span: 8 },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    }
-  }, _react2.default.createElement(_antd.DatePicker, { name: 'startDate', __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    }
-  })), _react2.default.createElement(FormItem, {
-    style: { marginTop: 48 },
-    wrapperCol: { span: 8, offset: 8 },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70
-    }
-  }, _react2.default.createElement(_antd.Button, { size: 'large', type: 'primary', htmlType: 'submit', __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    }
-  }, 'OK'), _react2.default.createElement(_antd.Button, { size: 'large', style: { marginLeft: 8 }, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    }
-  }, 'Cancel'))), _react2.default.createElement('div', {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    }
-  }, _react2.default.createElement(_antd.Row, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 83
-    }
-  }, _react2.default.createElement(_antd.Col, { span: 12, offset: 6, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 84
-    }
-  }, _react2.default.createElement(_antd.Table, { dataSource: dataSource, columns: columns, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 85
-    }
-  })), _react2.default.createElement(_antd.Col, { span: 12, offset: 6, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 87
-    }
-  }, _react2.default.createElement(_antd.Rate, { allowHalf: true, defaultValue: 2.5, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 88
-    }
-  })), _react2.default.createElement(_antd.Col, { span: 12, offset: 6, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 90
-    }
-  }, _react2.default.createElement(_antd.Progress, { type: 'circle', percent: 30, width: 80, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 91
-    }
-  }), _react2.default.createElement(_antd.Progress, { type: 'circle', percent: 70, width: 80, status: 'exception', __source: {
-      fileName: _jsxFileName,
-      lineNumber: 92
-    }
-  }), _react2.default.createElement(_antd.Progress, { type: 'circle', percent: 100, width: 80, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 93
-    }
-  }))))));
-};
+  }]);
+
+  return Index;
+}(_react.Component);
+
+exports.default = Index;
+
 
 var dataSource = [{
   key: '1',
-  name: 'Mike',
-  age: 32,
-  address: '10 Downing Street'
+  name: 'Pratama',
+  age: 23,
+  address: 'Jalan Raya Yogyakarta no.99'
 }, {
   key: '2',
-  name: 'John',
-  age: 42,
-  address: '10 Downing Street'
+  name: 'Setya',
+  age: 22,
+  address: 'Jalan Kebon Raya no.1'
 }];
 
 var columns = [{
-  title: 'Name',
+  title: 'Nama',
   dataIndex: 'name',
   key: 'name'
 }, {
-  title: 'Age',
+  title: 'Usia',
   dataIndex: 'age',
   key: 'age'
 }, {
-  title: 'Address',
+  title: 'Alamat',
   dataIndex: 'address',
   key: 'address'
 }];
